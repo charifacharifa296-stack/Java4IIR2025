@@ -89,65 +89,31 @@ Ce projet simule la gestion d’une petite bibliothèque. Chaque livre est repr�
 ```java
 import java.util.ArrayList;
 
-// Classe de base
-class Personne {
-    private String nom;
-    private String prenom;
-
-    public Personne(String nom, String prenom) {
-        this.nom = nom;
-        this.prenom = prenom;
-    }
-
-    public String getNom() { return nom; }
-    public String getPrenom() { return prenom; }
-
-    @Override
-    public String toString() {
-        return prenom + " " + nom;
-    }
-}
-
-// Classe Auteur qui hérite de Personne
-class Auteur extends Personne {
-    private String nationalite;
-
-    public Auteur(String nom, String prenom, String nationalite) {
-        super(nom, prenom);
-        this.nationalite = nationalite;
-    }
-
-    public String getNationalite() { return nationalite; }
-
-    @Override
-    public String toString() {
-        return super.toString() + " (" + nationalite + ")";
-    }
-}
-
-// Classe Livre
-class Livre {
+public class Livre {
     private String titre;
-    private Auteur auteur;
+    private String auteur;
     private int annee;
 
-    public Livre(String titre, Auteur auteur, int annee) {
+    public Livre(String titre, String auteur, int annee) {
         this.titre = titre;
         this.auteur = auteur;
         this.annee = annee;
     }
 
     public String getTitre() { return titre; }
-    public Auteur getAuteur() { return auteur; }
+    public String getAuteur() { return auteur; }
     public int getAnnee() { return annee; }
 
     @Override
     public String toString() {
-        return "Livre: " + titre + ", " + annee + ", Auteur: " + auteur;
+        return "Livre{" +
+               "titre='" + titre + '\'' +
+               ", auteur='" + auteur + '\'' +
+               ", annee=" + annee +
+               '}';
     }
 }
 
-// Classe GestionBibliotheque
 class GestionBibliotheque {
     private ArrayList<Livre> livres;
 
@@ -160,20 +126,15 @@ class GestionBibliotheque {
     }
 
     public void afficherLivres() {
-        for (Livre l : livres) {
+        for(Livre l : livres) {
             System.out.println(l);
         }
     }
 
     public static void main(String[] args) {
         GestionBibliotheque gb = new GestionBibliotheque();
-
-        Auteur a1 = new Auteur("Camus", "Albert", "Française");
-        Auteur a2 = new Auteur("Orwell", "George", "Britannique");
-
-        gb.ajouterLivre(new Livre("L'Étranger", a1, 1942));
-        gb.ajouterLivre(new Livre("1984", a2, 1949));
-
+        gb.ajouterLivre(new Livre("L'Étranger", "Albert Camus", 1942));
+        gb.ajouterLivre(new Livre("1984", "George Orwell", 1949));
         gb.afficherLivres();
     }
 }
