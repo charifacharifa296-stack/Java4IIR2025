@@ -3,7 +3,7 @@
 **Auteur : A. Larhlimi**
 
 *Destiné aux étudiants de 4 IIR - EMSI Casablanca*
-fait par tahir charifa et amine erradha 
+Fait par TAHIR CHARIFA ET AMINE ERRADHA 
 ***
 
 ## Introduction
@@ -75,8 +75,6 @@ ArrayList est une implémentation dynamique de tableau redimensionnable. Elle aj
 - Ajout en fin : amorti O(1)
 - Ajout/suppression au milieu : O(n)
 
-
-
 ***
 
 ## ArrayList - Partie 2
@@ -139,8 +137,7 @@ class GestionBibliotheque {
     }
 }
 ```
-  COMMENTAIRE
-   : L’ArrayList est une structure de données très utilisée en Java grâce à sa flexibilité et sa simplicité d’utilisation. Contrairement aux tableaux classiques, sa taille n’est pas fixe, ce qui permet d’ajouter ou de supprimer des éléments sans se soucier de la capacité initiale. Cependant, cette flexibilité a un coût : les opérations d’insertion ou de suppression au milieu de la liste peuvent devenir coûteuses, car elles nécessitent de décaler les éléments.En pratique, l’ArrayList est idéale lorsqu’on effectue principalement des lectures ou des ajouts en fin de liste. Pour les cas où les insertions fréquentes au milieu sont nécessaires, il est souvent préférable d’utiliser une autre structure comme LinkedList.
+
 
 ***
 
@@ -223,11 +220,19 @@ class GestionTaches {
 ### Quiz sur les Listes (ArrayList et LinkedList)
 
 1. Quelle implémentation offre un accès en temps constant par index ?
+   Réponse : ArrayList offre un accès en temps constant (O(1)) par index.
 2. Quelles sont les complexités d'ajout au milieu d'un ArrayList vs LinkedList ?
+   Réponse : 
+     - Pour un ArrayList, l'ajout au milieu a une complexité de O(n) en raison du décalage des éléments.
+     - Pour une LinkedList, l'ajout au milieu a une complexité de O(n) pour trouver l'emplacement, mais l'ajout en lui-même est O(1) une fois l'emplacement trouvé.
 3. Quelle structure utilise des pointeurs pour gérer les éléments ?
+    Réponse : LinkedList utilise des pointeurs pour gérer les éléments, chaque nœud pointant vers le nœud suivant et/ou précédent.
 4. Peut-on insérer des doublons dans une List ?
+    Réponse : Oui, on peut insérer des doublons dans une List, que ce soit une ArrayList ou une LinkedList.
 5. Quelles sont les différences majeures entre ArrayList et LinkedList ?
-
+    Réponse : 
+     - ArrayList utilise un tableau dynamique pour stocker les éléments, offrant un accès rapide par index mais des performances moindres pour les insertions/suppressions          au milieu.
+     - LinkedList utilise une structure de nœuds avec des pointeurs, permettant des insertions/suppressions efficaces, mais un accès par index plus lent.
 ***
 
 ## Interface Set
@@ -815,11 +820,3 @@ Ce document est prêt à être diffusé, imprimé, ou converti en PDF pour votre
 
 
 ![](collection.jpg)
-
-
-
-
-
-
-
-
