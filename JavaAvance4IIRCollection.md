@@ -75,7 +75,7 @@ ArrayList est une implémentation dynamique de tableau redimensionnable. Elle aj
 - Ajout en fin : amorti O(1)
 - Ajout/suppression au milieu : O(n)
 
-  // commentaire : L’ArrayList est une structure de données très utilisée en Java grâce à sa flexibilité et sa simplicité d’utilisation. Contrairement aux tableaux classiques, sa taille n’est pas fixe, ce qui permet d’ajouter ou de supprimer des éléments sans se soucier de la capacité initiale. Cependant, cette flexibilité a un coût : les opérations d’insertion ou de suppression au milieu de la liste peuvent devenir coûteuses, car elles nécessitent de décaler les éléments.En pratique, l’ArrayList est idéale lorsqu’on effectue principalement des lectures ou des ajouts en fin de liste. Pour les cas où les insertions fréquentes au milieu sont nécessaires, il est souvent préférable d’utiliser une autre structure comme LinkedList.
+
 
 ***
 
@@ -139,7 +139,8 @@ class GestionBibliotheque {
     }
 }
 ```
-
+  COMMENTAIRE
+   : L’ArrayList est une structure de données très utilisée en Java grâce à sa flexibilité et sa simplicité d’utilisation. Contrairement aux tableaux classiques, sa taille n’est pas fixe, ce qui permet d’ajouter ou de supprimer des éléments sans se soucier de la capacité initiale. Cependant, cette flexibilité a un coût : les opérations d’insertion ou de suppression au milieu de la liste peuvent devenir coûteuses, car elles nécessitent de décaler les éléments.En pratique, l’ArrayList est idéale lorsqu’on effectue principalement des lectures ou des ajouts en fin de liste. Pour les cas où les insertions fréquentes au milieu sont nécessaires, il est souvent préférable d’utiliser une autre structure comme LinkedList.
 
 ***
 
@@ -814,6 +815,7 @@ Ce document est prêt à être diffusé, imprimé, ou converti en PDF pour votre
 
 
 ![](collection.jpg)
+
 
 
 
